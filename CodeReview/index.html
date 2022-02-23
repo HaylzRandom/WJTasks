@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Review Task</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- 
+        - 'Join our newsletter' should be a heading tag like <h1> rather than a paragraph due to being main title of page 
+    -->
+<p>Join our newsletter</p>
+<!-- 
+    - <form> tag is missing for the newsletter form 
+-->
+<!-- 
+    - Divs with a class of form should be a <fieldset> so it can group related elements in the form together 
+-->
+<div class="field">
+    <!-- 
+        - Instead of using span with a class of label, each of them can be their own <label> tag with a 'for' attribute to show which form element that it is bound to 
+        - Missing colon for label
+    -->
+  <span class="label">First name *</span>
+  <!-- 
+      - <input> is missing various attributes. 
+      - Type should be text 
+      - Should have a name attribute such as 'first-name'. 
+      - Should include an ID so the corresponding label can be bound to it. 
+      - As it is also required (as indicated by *) it should also have the required attribute as well 
+      - <input> is a self-closing tag, does not require </input>
+    -->
+  <input></input>
+</div>
+<!-- 
+    - Divs with a class of form should be a <fieldset> so it can group related elements in the form together 
+-->
+<div class="field">
+    <!-- 
+        - Instead of using span with a class of label, each of them can be their own <label> tag with a 'for' attribute to show which form element that it is bound to 
+        - Missing colon for label text
+    -->
+  <span class='label'>Last name *</span>
+  <!-- 
+      - <input> is missing various attributes. 
+      - Type should be text, 
+      - Should have a name attribute such as 'last-name'. - Should include an ID so the corresponding label can be bound to it. 
+      - As it is also required (as indicated by *) it should also have the required attribute as well 
+      - <input> is a self-closing tag, does not require </input>
+    -->
+  <input></input>
+</div>
+<!-- 
+    - Divs with a class of form should be a <fieldset> so it can group related elements in the form together 
+-->
+<div class="field">
+    <!-- 
+        - Instead of using span with a class of label, each of them can be their own label tag with a 'for' attribute to show which form element that it is bound to 
+    -->
+  <span class="label">Email address:</span>
+  <!-- 
+      - <input> is missing various attributes. 
+      - Type should be email, 
+      - Should have a name attribute such as 'email'. - Should include an ID so the corresponding label can be bound to it. 
+      - As it is also required (as indicated by *) it should also have the required attribute as well 
+      - <input> is a self-closing tag, does not require </input>
+    -->
+  <input></input>
+</div>
+<!-- 
+    - Divs with a class of form should be a <fieldset> so it can group related elements in the form together 
+        -->
+<div class="field">
+    <!-- 
+        - Instead of using span with a class of label, each of them can be their own <label> tag with a 'for' attribute to show which form element that it is bound to 
+    -->
+  <span class="label">Favourite colour</span>
+  <!-- 
+      - <select> tag should have a name attribute to refer to what the drop down menu options are relating to
+      - ID for the label to be bound to 
+    -->
+  <select>
+      <!-- 
+          - Each <option> should have a value attribute to correspond to what the value is for the drop down selection. This is normally what the information is sent to the server and can be used further down the line in JavaScript for example -->
+    <option>Blue</option>
+    <option>Red</option>
+    <option>Green</option>
+  </select>
+</div>
+<!-- 
+    - I personally would have made this a <input> tag with a type of 'submit' due to this completing the form. 
+-->
+<button onClick="submitForm()">Sign up</button>
+<!-- 
+    - Remove class of 'normal' if this is the only paragraph tag on the page. Keep if further paragraphs with styling to be added into the future. 
+    - Anchor tag there is the option of adding the ability to open the link in a new tab/window allowing users to navigate back to the form more easily
+-->
+<p class="normal" >By submitting this form you acknowledge that you have read and agree to our <a href="/terms">terms & conditions</a></p>
+<script src="./script.js"></script>
+</body>
+</html>

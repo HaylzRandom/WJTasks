@@ -1,0 +1,71 @@
+/* Due to the changing of many tags in index.html, a lot of selectors would need to be changed below to allow the same sort of styling.
+
+I would also suggest these further improvements:
+- Putting colours into their own variables. As the colours are used multiple times throughout the code, putting them in variables will make updated colours easier at a later time.
+- Re-order the group of selectors. Working the way down the page I would have the CSS as follows: h1, fieldset, label, fieldset input, input[type="submit"], p. Allows naturally flow of page to be understood and code easier to find
+*/
+
+/* 
+- This would become a selector of fieldset to select all tags of fieldset. 
+- Due to changing the div to a fieldset, border: none would be reccommended to be added to remove the border around each fieldset. 
+- To match original spec, padding would also need to be set to 0 
+*/
+.field {
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* 
+- Change selectors to fieldset and label to match changed tags. 
+- Fieldset selector can also be removed but may be required if further improvements are made to newsletter form for specificity 
+*/
+.field .label {
+  font-weight: bold;
+}
+
+/* 
+- Change .field selector to fieldset
+- Remove border: none as border created below
+*/
+.field input {
+  width: 400px;
+  border: none;
+  border: 1px solid #000;
+}
+
+/* - As I would change the button to be an input with type of submit I would change the selector to: input[type="submit"] so only this submit button will be affected and not any of the other fields. 
+- I would remove the commented out code as below the color has been set to white using a hexcode. 
+- Font-weight is missing a finalising semi colon. 
+- Padding is using a mixture of measurements. Perhaps one type would be more clearer
+- Change background to background-color if no gradient being added
+*/
+button {
+  margin-top: 2em;
+/*   color: white; */
+  color: #fff;
+  background: #7070FF;
+  padding: 1rem 10px;
+  font-weight: 700
+}
+
+/* 
+- Selector needs to be changed to a h1 due to the tag being changed */
+p {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #7070FF;
+}
+
+/* 
+- Selector would need to be changed to a p selector due to only p being on the form. 
+- Color hexcode does not need to be that long, it can be reduced to #000 
+*/
+.normal {
+  font-size: 12px;
+  font-weight: 400;
+  color: #000000;
+  margin-top: 20px;
+}
+

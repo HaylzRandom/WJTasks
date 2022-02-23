@@ -1,0 +1,44 @@
+:root {
+	--color-blue: #7070ff;
+	--color-black: #000;
+	--color-white: #fff;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 10px;
+	color: var(--color-blue);
+}
+
+fieldset {
+	display: block;
+	margin-bottom: 12px;
+	border: none;
+	padding: 0;
+}
+
+fieldset label {
+	font-weight: bold;
+}
+
+fieldset input {
+	width: 400px;
+	border: 1px solid var(--color-black);
+}
+
+input[type='submit'] {
+	margin-top: 2em;
+	color: var(--color-white);
+	background-color: var(--color-blue);
+	padding: 16px 10px;
+	font-weight: 700;
+}
+
+p {
+	font-size: 12px;
+	font-weight: 400;
+	color: var(--color-black);
+	margin-top: 20px;
+}
